@@ -3,6 +3,9 @@ import { Form, Input, Button} from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import './login.less'
 import logo from './images/logo.png'
+import wechatLogo from './images/wechat.svg'
+import messageLogo from './images/message.svg'
+import touristLogo from './images/tourist.svg'
 import {reqLogin} from '../../api'
 
 export default class Login extends Component {
@@ -56,7 +59,7 @@ export default class Login extends Component {
                             },
                         ]}
                         >
-                        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+                        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名" />
                         </Form.Item>
 
                         <Form.Item
@@ -79,7 +82,7 @@ export default class Login extends Component {
                         <Input
                             prefix={<LockOutlined className="site-form-item-icon" />}
                             type="password"
-                            placeholder="Password"
+                            placeholder="密码"
                         />
                         </Form.Item>
 
@@ -94,9 +97,9 @@ export default class Login extends Component {
                     </Form>
                     <h5>其他方式</h5>
                     <ul id="way-box">
-                        <li><a href="#"><img src={logo} alt="微信"/>微信</a></li>
-                        <li><a href="#"><img src={logo} alt="短信"/>短信验证</a></li>
-                        <li><a href="#"><img src={logo} alt="游客"/>游客访问</a></li>
+                        <li><a href="/#"><img src={wechatLogo} alt="微信"/>微信</a></li>
+                        <li><a href="/#"><img src={messageLogo} alt="短信"/>短信验证</a></li>
+                        <li><a href="/#"><img src={touristLogo} alt="游客"/>游客访问</a></li>
                     </ul>
                 </section>
             </div>
